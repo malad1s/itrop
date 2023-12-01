@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  id="WebApp_ID" version="3.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>home.jsp</welcome-file>
+  </welcome-file-list>
+
+  <listener>
+    <listener-class>
+      com.my.listeners.AppContextListener
+    </listener-class>
+  </listener>
+
+
+  <context-param>
+    <param-name>isLog4jAutoInitializationDisabled</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+
+  <filter>
+    <filter-name>EncodingReqRespFilter</filter-name>
+    <filter-class>com.my.filters.EncodingReqRespFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingReqRespFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.my.filters.LoginFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/login</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.my.filters.AuthFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/user_update</url-pattern>
+    <url-pattern>/user_page</url-pattern>
+    <url-pattern>/my_conferences</url-pattern>
+    <url-pattern>/eventPresence</url-pattern>
+    <url-pattern>/createReport</url-pattern>
+    <url-pattern>/createReportBS</url-pattern>
+    <url-pattern>/create_event</url-pattern>
+    <url-pattern>/changeReport</url-pattern>
+    <url-pattern>/changeEvent</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>ModeratorFilter</filter-name>
+    <filter-class>com.my.filters.ModeratorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ModeratorFilter</filter-name>
+    <url-pattern>/eventPresence</url-pattern>
+    <url-pattern>/createReport</url-pattern>
+    <url-pattern>/create_event</url-pattern>
+    <url-pattern>/changeReport</url-pattern>
+    <url-pattern>/changeEvent</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>SpeakerFilter</filter-name>
+    <filter-class>com.my.filters.SpeakerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SpeakerFilter</filter-name>
+    <url-pattern>/createReportBS</url-pattern>
+
+  </filter-mapping>
+
+  <filter>
+    <filter-name>ChangeUserFilter</filter-name>
+    <filter-class>com.my.filters.ChangeUserFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>ChangeUserFilter</filter-name>
+    <url-pattern>/user_update</url-pattern>
+    <url-pattern>/register</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>ChangeReportFilter</filter-name>
+    <filter-class>com.my.filters.ChangeReportFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>ChangeReportFilter</filter-name>
+    <url-pattern>/createReport</url-pattern>
+    <url-pattern>/changeReport</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>ChangeEventFilter</filter-name>
+    <filter-class>com.my.filters.ChangeEventFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ChangeEventFilter</filter-name>
+    <url-pattern>/create_event</url-pattern>
+    <url-pattern>/changeEvent</url-pattern>
+  </filter-mapping>
+
+
+</web-app>
+
+

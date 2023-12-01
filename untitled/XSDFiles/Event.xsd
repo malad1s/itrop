@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  	targetNamespace="http://it.nure.ua/matsuytskij/xml/event"
+           elementFormDefault="qualified"
+        xmlns:plac="http://it.nure.ua/matsuytskij/xml/place">
+
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/place" schemaLocation="Place.xsd"/>
+
+    <xs:complexType name="Event">
+        <xs:all>
+            <xs:element name="id_event" type="xs:integer"/>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="date" type="xs:string"/>
+            <xs:element name="place" type="plac:Place"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="pinned" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:enumeration value="0"/>
+                        <xs:enumeration value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="time" type="xs:string" />
+        </xs:all>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="organizer" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+</xs:schema>

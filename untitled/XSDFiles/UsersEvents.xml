@@ -1,0 +1,29 @@
+<x:UsersEvents xmlns:x="http://it.nure.ua/matsuytskij/xml/" xmlns:even="http://it.nure.ua/matsuytskij/xml/event" xmlns:plac="http://it.nure.ua/matsuytskij/xml/place" xmlns:user="http://it.nure.ua/matsuytskij/xml/user" xmlns:role="http://it.nure.ua/matsuytskij/xml/role">
+  <!--1 or more repetitions:-->
+  <x:UserEvent>
+    <x:event type="public" >
+      <even:id_event>100</even:id_event>
+      <even:name>JavaEvent</even:name>
+      <even:date>28.11.2020</even:date>
+      <even:place>
+        <plac:online>online</plac:online>
+      </even:place>
+      <even:description>Event were we will speak about java</even:description>
+      <even:pinned>1</even:pinned>
+      <even:time>18:00</even:time>
+    </x:event>
+    <x:user>
+      <user:id>3</user:id>
+      <user:surname>SNITH</user:surname>
+      <user:firstname>JAKSON</user:firstname>
+      <user:password>12341234</user:password>
+      <user:email>string@gmai.com</user:email>
+      <user:role>
+        <role:name>user</role:name>
+        <role:idRole>100</role:idRole>
+      </user:role>
+    </x:user>
+    <x:presence>0</x:presence>
+  </x:UserEvent>
+
+</x:UsersEvents>

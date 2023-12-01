@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  	targetNamespace="http://it.nure.ua/matsuytskij/xml/user"
+           elementFormDefault="qualified"
+           xmlns:emaill="http://it.nure.ua/matsuytskij/xml/emailtype"
+           xmlns:rol="http://it.nure.ua/matsuytskij/xml/role"
+           xmlns:pass="http://it.nure.ua/matsuytskij/xml/password">
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/emailtype" schemaLocation="EmailType.xsd"/>
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/role" schemaLocation="Role.xsd"/>
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/password" schemaLocation="PasswordType.xsd"/>
+
+    <xs:complexType name="User">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="surname" type="xs:string" minOccurs="1"/>
+            <xs:element name="firstname" type="xs:string" minOccurs="1"/>
+            <xs:element name="password" type="pass:PasswordType"/>
+            <xs:element name="email" type="emaill:EmailType" minOccurs="1"/>
+            <xs:element name="role" type="rol:Role" />
+        </xs:sequence>
+
+
+    </xs:complexType>
+
+</xs:schema>
