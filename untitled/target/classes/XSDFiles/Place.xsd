@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  	targetNamespace="http://it.nure.ua/matsuytskij/xml/place"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="Place">
+        <xs:choice>
+            <xs:element name="online" type="xs:string" minOccurs="1" maxOccurs="1"  />
+            <xs:element name="offline" type="xs:string" minOccurs="1" maxOccurs="1" />
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>

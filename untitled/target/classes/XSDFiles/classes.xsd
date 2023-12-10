@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://it.nure.ua/matsuytskij/xml/"
+            xmlns:evnt="http://it.nure.ua/matsuytskij/xml/event"
+            xmlns:usr="http://it.nure.ua/matsuytskij/xml/user">
+
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/event" schemaLocation="Event.xsd"/>
+    <xs:import  namespace="http://it.nure.ua/matsuytskij/xml/user" schemaLocation="User.xsd"/>
+    <xs:element name="Event" type="evnt:Event" />
+    <xs:element name="UsersEvents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="UserEvent" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="event" type="evnt:Event" />
+                            <xs:element name="user" type="usr:User" />
+                            <xs:element name="presence">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:enumeration value="0"/>
+                                        <xs:enumeration value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="Events">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element  name ="event" type="evnt:Event" maxOccurs="unbounded"/>
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+
+    <xs:element name="User" type="usr:User" />
+
+</xs:schema>

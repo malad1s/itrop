@@ -1,0 +1,51 @@
+<?xml-stylesheet href="events1.xsl"  type="text/xsl" ?>
+<x:Events xmlns:x="http://it.nure.ua/matsuytskij/xml/"
+          xmlns:even="http://it.nure.ua/matsuytskij/xml/event"
+          xmlns:plac="http://it.nure.ua/matsuytskij/xml/place">
+
+
+  <x:event type="public" organizer="Jon.Jonson">
+    <even:id_event>100</even:id_event>
+    <even:name>Java1</even:name>
+    <even:date>18.10.2023</even:date>
+    <even:place>
+      <plac:online>online</plac:online>
+    </even:place>
+    <even:description>string</even:description>
+    <even:pinned>1</even:pinned>
+    <even:time>13:00</even:time>
+  </x:event>
+  <x:event type="private" organizer="Jon.Jonson">
+    <even:id_event>12</even:id_event>
+    <even:name>Java2</even:name>
+    <even:date>18.11.2021</even:date>
+    <even:place>
+      <plac:offline>offline</plac:offline>
+    </even:place>
+    <even:description>SomeDesc</even:description>
+    <even:pinned>1</even:pinned>
+    <even:time>14:00</even:time>
+  </x:event>
+  <x:event type="public" organizer="Jon.Jonson">
+    <even:id_event>14</even:id_event>
+    <even:name>Java3</even:name>
+    <even:date>18.10.2023</even:date>
+    <even:place>
+      <plac:online>online</plac:online>
+    </even:place>
+    <even:description>java curs</even:description>
+    <even:pinned>1</even:pinned>
+    <even:time>16:00</even:time>
+  </x:event>
+  <x:event type="public" organizer="Jon.Jonson">
+    <even:id_event>15</even:id_event>
+    <even:name>Java4</even:name>
+    <even:date>12.10.2024</even:date>
+    <even:place>
+      <plac:online>online</plac:online>
+    </even:place>
+    <even:description>java curs 2</even:description>
+    <even:pinned>1</even:pinned>
+    <even:time>17:00</even:time>
+  </x:event>
+</x:Events>

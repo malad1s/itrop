@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  	targetNamespace="http://it.nure.ua/matsuytskij/xml/emailtype"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+            <xs:maxLength value="45"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,11 @@
+<x:User xmlns:x="http://it.nure.ua/matsuytskij/xml/" xmlns:user="http://it.nure.ua/matsuytskij/xml/user" xmlns:role="http://it.nure.ua/matsuytskij/xml/role">
+  <user:id>3</user:id>
+  <user:surname>string</user:surname>
+  <user:firstname>string</user:firstname>
+  <user:password>stringstring</user:password>
+  <user:email>string@gmail.com</user:email>
+  <user:role>
+    <role:name>string</role:name>
+    <role:idRole>100</role:idRole>
+  </user:role>
+</x:User>

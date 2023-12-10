@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:UsersEvents xmlns="http://it.nure.ua/matsuytskij/xml/event"
+                 xmlns:ns2="http://it.nure.ua/matsuytskij/xml/place"
+                 xmlns:ns3="http://it.nure.ua/matsuytskij/xml/"
+                 xmlns:ns4="http://it.nure.ua/matsuytskij/xml/user"
+                 xmlns:ns5="http://it.nure.ua/matsuytskij/xml/role">
+    <ns3:UserEvent>
+        <ns3:event type="public">
+        <id_event>100</id_event>
+            <name>JavaEvent</name><date>28.11.2020</date><place><ns2:online>online</ns2:online></place><description>Event were we will speak about java</description><pinned>1</pinned><time>18:00</time></ns3:event><ns3:user><ns4:id>3</ns4:id><ns4:surname>SNITH</ns4:surname><ns4:firstname>JAKSON</ns4:firstname><ns4:password>12341234</ns4:password><ns4:email>string@gmai.com</ns4:email><ns4:role><ns5:name>user</ns5:name><ns5:idRole>100</ns5:idRole></ns4:role></ns3:user><ns3:presence>0</ns3:presence></ns3:UserEvent><ns3:UserEvent><ns3:event type="public"><id_event>100</id_event><name>JavaEvent</name><date>28.11.2020</date><place><ns2:online>online</ns2:online></place><description>Event were we will speak about java</description><pinned>1</pinned><time>18:00</time></ns3:event><ns3:user><ns4:id>4</ns4:id><ns4:surname>Bond</ns4:surname><ns4:firstname>James</ns4:firstname><ns4:password>12341234</ns4:password><ns4:email>string@gmai.com</ns4:email><ns4:role><ns5:name>user</ns5:name><ns5:idRole>100</ns5:idRole></ns4:role></ns3:user><ns3:presence>0</ns3:presence></ns3:UserEvent></ns3:UsersEvents>
